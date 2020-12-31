@@ -1,4 +1,12 @@
 const http = require('http');
+
+//node modules
+const express = require("express");
+const bodyParser = require("body-parser");
+const request = require("request");
+
+
+
 const port = process.env.PORT || 3000
 
 const server = http.createServer((req, res) => {
