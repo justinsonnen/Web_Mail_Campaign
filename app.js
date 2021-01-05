@@ -51,7 +51,7 @@ app.post("/", function(req, res){
   //mailchimp key
   const options = {
     method: "POST",
-    auth: "justin:bffa222fe1f01daef7323fd0b4d63ce0-us2"
+    auth: "justin:ae1f0a3c8a402566d10a740bf339e5e6-us2"
   }
 
   //https request options
