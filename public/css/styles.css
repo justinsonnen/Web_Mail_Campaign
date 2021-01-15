@@ -4,6 +4,7 @@ body {
 }
 
 body {
+  background-image: url(../images/Bkgrnd_IMG.jpg);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
