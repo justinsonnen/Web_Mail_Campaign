@@ -9,6 +9,8 @@ const port = process.env.PORT || 3000;
 const MC_ID = process.env.MAILCHIMP_LIST_ID;
 const API_KEY = process.env.MAILCHIMP_API_KEY;
 
+
+
 const app = express();
 
 // serve static files via express

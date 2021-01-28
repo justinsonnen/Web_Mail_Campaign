@@ -1,59 +1,203 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.1.1">
-    <title>Newsletter Signup</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Newsletter Signup</title>
 
-    <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet">
 
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/810e498074.js" crossorigin="anonymous"></script>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body class="text-center" >
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+</head>
+
+
+<body>
+
+  <!------------------------------------- Title Page -------------------------->
+
+  <section class="parallax_container" id="title">
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-custom">
+        <a href="#title" class="navbar-brand">Sonnen Art Studio</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#schedule" class="nav-link">Schedule</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#gallery" class="nav-link">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="#newsletter" class="nav-link">Newsletter Signup</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="mantra mantra-top">
+            Be <br>
+            Confident. <br>
+          </h1>
+          <h1 class="mantra">
+            Imagine, <br>
+            then Create
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------------------------------- Schedule Page ----------------------->
+ 
+  <section class="parallax_container" id="schedule">
+    <div class="container-fluid">
+      <div>
+        <h1 class="mantra">Weekly Schedule</h1>
+      </div>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-custom">
+        <tr id="header">
+          <th scope="col">WeekDay</th>
+          <th scope="col">Time</th>
+          <th scope="col">Class</th>
+          <th scope="col">Skill Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th class="row1" scope="row">Monday</th>
+          <td>6pm - 7pm</td>
+          <td>drawing/painting</td>
+          <td>beginner</td>
+        </tr>
+        <tr>
+          <th class="row1" scope="row">Tuesday</th>
+          <td>4pm - 6pm</td>
+          <td>drawing/painting</td>
+          <td>intermediate</td>
+        </tr>
+        <tr>
+          <th class="row1" scope="row">Wednesday</th>
+          <td>10am - 11am</td>
+          <td>sculpting</td>
+          <td>beginner</td>
+        </tr>
+        <tr>
+          <th class="row1" scope="row">Wednesday</th>
+          <td>6pm - 7pm</td>
+          <td>sculpting</td>
+          <td>advanced</td>
+        </tr>
+        <tr>
+          <th class="row1" scope="row">Thursday</th>
+          <td>4pm - 6pm</td>
+          <td>open medium</td>
+          <td>intermediate</td>
+        </tr>
+        <tr>
+          <th class="row1" scope="row">Friday</th>
+          <td>6pm - 9pm</td>
+          <td>open medium</td>
+          <td>advanced</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
+
+  <!------------------------------------- Image Holder Page ------------------->
+ 
+  <section class="parallax_container" id="image_holder">
+
+  </section>
+
+  <!------------------------------------- Gallery Page ------------------------>
+
+
+
+  <section class="parallax_container" id="gallery">
+    <div class="container-fluid">
+
+      <div class="mantra">
+        Student's
+        Showcase
+      </div>
+
+      <div class="container">
+
+  
+        <div class="panel" style="background-image: url(../images/pic1.jpg)">
+            <h3>Sandy Johnson - "Serenity"</h3>
+        </div>
+
+        <div class="panel" style="background-image: url(../images/pic2.jpg)">
+            <h3>Lenny Rogers - "Dream Slide"</h3>
+        </div>
+
+        <div class="panel" style="background-image: url(../images/pic3.jpg)">
+            <h3>Angie Colbern - "Morning Cups"</h3>
+        </div>
+
+        <div class="panel" style="background-image: url(../images/pic4.jpg)">
+            <h3>Gene Lorn - "Which Witch"</h3>
+        </div>
+
+        <div class="panel" style="background-image: url(../images/pic5.jpg)">
+            <h3>Aaron Allen - "Public Space"</h3>
+        </div>
+    </div>
+
+    </div>
+  </section>
+
+  <!------------------------------------- Newsletter Signup Page -------------->
+
+
+  <section class="parallax_container" id="newsletter">
+    <div class="container-fluid">
+
     <form action="/" class="form-signin" method="POST">
-  <!-- <img class="mb-4" src="images/art.jpg" alt="" width="72" height="99"> -->
+      <!-- <img class="mb-4" src="images/art.jpg" alt="" width="72" height="99"> -->
+    
+      <h1 class="h3 mb-3 font-weight-normal">Signup to My Newsletter</h1>
+    
+      <input type="text" name= "fName" class="form-control top" placeholder="First Name" >
+      <input type="text" name= "lName" class="form-control middle" placeholder="Last Name" required>
+      <input type="email" name= "email" class="form-control bottom" placeholder="Email" required>
+    
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me UP</button>
+      <p class="copyright">&copy; Justin Sonnen 2020</p>
+    </form>
+  </div>
+  </section>
 
-  <h1 class="h3 mb-3 font-weight-normal">Signup to My Newsletter</h1>
-
-  <input type="text" name= "fName" class="form-control top" placeholder="First Name" required autofocus>
-  <input type="text" name= "lName" class="form-control middle" placeholder="Last Name" required>
-  <input type="email" name= "email" class="form-control bottom" placeholder="Email" required>
-
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Me UP</button>
-  <p class="mt-5 mb-3 text-muted">&copy; Justin Sonnen 2020</p>
-</form>
+  <script src="javascript/script.js"></script>
 </body>
+
 </html>
