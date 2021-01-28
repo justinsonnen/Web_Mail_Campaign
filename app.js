@@ -23,12 +23,12 @@ app.use(bodyParser.urlencoded({
 
 
 //points to signup page
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
 
 //grab user input form data
-app.post("/", function(req, res){
+app.post("/", function (req, res) {
   const firstName = req.body.fName;
   const lastName = req.body.lName;
   const email = req.body.email;
@@ -59,27 +59,28 @@ app.post("/", function(req, res){
   }
 
   //https request options
-  const request = https.request(url, options, function(response) {
+  const request = https.request(url, options, function (response) {
 
     //response redirect to confirm outcome of submitted form
-    if(response.statusCode === 200){
+    if (response.statusCode === 200) {
       res.sendFile(__dirname + "/success.html");
-    }else{
+    } else {
       res.sendFile(__dirname + "/fail.html");
     }
 
-    response.on("data", function(data) {
+    response.on("data", function (data) {
       console.log(JSON.parse(data));
     });
   });
 
   request.write(jsonData);
   request.end();
-
-  console.log(firstName, lastName, email);
 });
 
+app.post("/fail", function (req, res) {
+  res.redirect("/");
+});
 
-app.listen(port, function() {
+app.listen(port, function () {
   console.log("Server is running on port: 3000");
 });

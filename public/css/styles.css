@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-body { 
-  padding-top: 55px; 
+body {
+  padding-top: 55px;
   height: 100%;
   margin: 0;
 }
 
-#title .container-fluid{
+#title .container-fluid {
   padding: 15% 15%;
 }
 
@@ -21,23 +21,23 @@ body {
 /* Navbar Company Name Text Color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: #16c79a;
+  color: #16c79a;
 }
 
 /* Remove Border-box from Menu */
 .navbar-toggler:focus,
-.navbar-toggler:active{
+.navbar-toggler:active {
   outline: none;
   box-shadow: none;
 }
 
 /* Navbar Link Color */
-.navbar-custom .navbar-nav .nav-link{
+.navbar-custom .navbar-nav .nav-link {
   color: #f8f1f1;
 }
 
 /* Navbar Link Hover Color */
-.navbar-custom .navbar-nav .nav-link:hover{
+.navbar-custom .navbar-nav .nav-link:hover {
   color: #16c79a;
 }
 
@@ -79,7 +79,7 @@ body {
   height: 100vh;
 }
 
-#schedule .container-fluid{
+#schedule .container-fluid {
   padding: 10% 10%;
 }
 
@@ -88,7 +88,7 @@ body {
   color: #16c79a;
 }
 
-.row1{
+.row1 {
   color: #f8f1f1;
 }
 
@@ -122,6 +122,7 @@ td {
   overflow: hidden;
   margin: 0;
 }
+
 #gallery .mantra {
   color: #11698e;
   margin-top: 120px;
@@ -162,6 +163,7 @@ td {
 .panel.active {
   flex: 5;
 }
+
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
@@ -200,9 +202,11 @@ td {
   padding: 15px;
   margin: auto;
 }
+
 .form-signin .checkbox {
   font-weight: 400;
 }
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -210,9 +214,11 @@ td {
   padding: 10px;
   font-size: 16px;
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
 }
+
 .top {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
@@ -235,7 +241,27 @@ td {
 }
 
 
-.parallax_container{
+.parallax_container {
   width: 100%;
   height: 100vh;
+}
+
+/* Success and Failure Pages */
+
+.bg-custom {
+  background-color: #16c79a;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #f8f1f1;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+}
+
+.jumbotron .btn-custom {
+  color: #f8f1f1;
+  background-color: #11698e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
 }
