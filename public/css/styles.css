@@ -215,6 +215,7 @@ td {
 
 
 #gallery {
+  position: relative;
   box-sizing: border-box;
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -226,8 +227,11 @@ td {
 }
 
 #gallery .title-text {
+  position: relative;
   color: #161d6f;
-  margin-top: 120px;
+  margin: 15px;
+  top: 10px;
+  left: 4%;
 }
 
 
