@@ -229,8 +229,8 @@ td {
 #gallery .title-text {
   position: relative;
   color: #161d6f;
-  margin: 15px;
-  top: 10px;
+  margin-bottom: 15px;
+  top: 5px;
   left: 4%;
 }
 
