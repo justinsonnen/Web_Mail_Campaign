@@ -1,82 +1,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-body {
-  padding-top: 55px;
-  height: 100%;
+/* Universal selector, start with no margin or padding
+change box model to remove any padding or borders */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#title .container-fluid {
-  padding: 15% 15%;
-}
-
-/* Navbar and Page1 Slide*/
-
-
-/* Navbar Background Color */
-.navbar-custom {
-  background-color: #19456b;
-}
-
-/* Navbar Company Name Text Color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-  color: #16c79a;
-}
-
-/* Remove Border-box from Menu */
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none;
-  box-shadow: none;
-}
-
-/* Navbar Link Color */
-.navbar-custom .navbar-nav .nav-link {
-  color: #f8f1f1;
-}
-
-/* Navbar Link Hover Color */
-.navbar-custom .navbar-nav .nav-link:hover {
-  color: #16c79a;
-}
-
-
-#title {
-  background-image: url(../images/brushes.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-#title .container-fluid {
-  height: 100vh;
-}
-
-.mantra-top {
-  margin-top: 80px;
-}
-
-.mantra {
+body {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #f8f1f1;
   line-height: 1.1;
   letter-spacing: 0.1rem;
-  padding-top: 20px;
+  padding: 30px;
 }
+
+
+
+/*Header first page view*/
+
+/* viewport height, and bkgimg definitons*/
+/* clip path: top-left to top-right, 
+top-right to bottom-right, 
+top-left to bottom-left */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom, 
+      hsla(235, 67%, 26%, 0.856), 
+     hsla(0, 0%, 96%, 0.212)), 
+      url(../images/brushes.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  margin-top: 30px;
+  margin-left: 55px;
+  transform: translate(-50%, -50%);
+ padding: 10px 5px;
+}
+
+.heading-primary {
+  color: #c7ffd8;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-main1 {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 15px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-main2 {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 15px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub1 {
+  display: block;
+  font-size: 50px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+  margin-top: 60px;
+
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub2 {
+  display: block;
+  font-size: 50px;
+  font-weight: 900px;
+  letter-spacing: 20px;
+
+
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;  
+      transform:translateX(-100px) rotate(12deg);
+  }
+
+  75% {
+      transform: translateX(2px);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform:translateX(100px) rotate(12deg);
+  }
+
+  75% {
+      transform: translateX(-2px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform:translateY(30px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
 
 
 
 /* Schedule Page2 Slide */
 #schedule {
-  background-color: #11698e;
+  background-color: #161d6f;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
 }
 
 #schedule .container-fluid {
@@ -84,16 +185,16 @@ body {
 }
 
 .thead-custom {
-  background-color: #19456b;
-  color: #16c79a;
+  background-color: #98ded9;
+  color: #161d6f;
 }
 
 .row1 {
-  color: #f8f1f1;
+  color: #f6f6f6;
 }
 
 td {
-  color: #16c79a;
+  color: #c7ffd8;
 }
 
 
@@ -106,6 +207,7 @@ td {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
 }
 
 /* Gallery Page4 slide */
@@ -123,8 +225,8 @@ td {
   margin: 0;
 }
 
-#gallery .mantra {
-  color: #11698e;
+#gallery .title-text {
+  color: #161d6f;
   margin-top: 120px;
 }
 
@@ -143,13 +245,25 @@ td {
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 50px;
-  color: white;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
   position: relative;
   transition: flex 0.7s ease-in;
 }
+
+.panel:nth-of-type(1),
+.panel:nth-of-type(3),
+.panel:nth-of-type(5) {
+  color: #161d6f;
+}
+
+.panel:nth-of-type(2),
+.panel:nth-of-type(4) {
+  color: #ffee93;
+}
+
+
 
 .panel h3 {
   font-size: 24px;
@@ -193,7 +307,31 @@ td {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #16c79a;
+  background-color: #98ded9;
+  clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
+
+}
+
+.text-signup-main {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 11px;
+  text-align: center;
+  color: #161d6f;
+  padding: 2px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.text-signup-sub {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 16px;
+  text-align: center;
+  color: #161d6f;
+  padding: 2px;
+  margin-top: 4px;
+  text-transform: uppercase;
 }
 
 .form-signin {
@@ -237,9 +375,18 @@ td {
 }
 
 .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 9px;
   text-align: center;
+  color: #161d6f;
+  padding: 2px;
+  margin-top: 4px;
 }
 
+.btn-center{
+  background-color: #161d6f;
+}
 
 .parallax_container {
   width: 100%;
