@@ -45,6 +45,7 @@ top-left to bottom-left */
   position: relative;
 
   clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+  -webkit-clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
 }
 
 .logo-box {
@@ -185,6 +186,7 @@ top-left to bottom-left */
   justify-content: center;
   height: 100vh;
   clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+  -webkit-clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
 }
 
 #schedule .container-fluid {
@@ -215,6 +217,7 @@ td {
   background-repeat: no-repeat;
   background-attachment: fixed;
   clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+  -webkit-clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
 }
 
 /* Gallery Page4 slide */
@@ -320,7 +323,7 @@ td {
   height: 100vh;
   background-color: #98ded9;
   clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
-
+  -webkit-clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
 }
 
 .text-signup-main {
