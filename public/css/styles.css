@@ -298,6 +298,11 @@ td {
 }
 
 @media (max-width: 500px) {
+
+  html {
+    font-size: 32%;
+  }
+  
   .container {
     width: 100vw;
   }
