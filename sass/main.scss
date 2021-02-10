@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* Universal selector, start with no margin or padding
+change box model to remove any padding or borders */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set root font size */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #f8f1f1;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+  padding: 3rem;
+
+  box-sizing: border-box;
+}
+
+
+
+/*Header first page view*/
+
+/* viewport height, and bkgimg definitons*/
+/* clip path: top-left to top-right, 
+top-right to bottom-right, 
+top-left to bottom-left */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom, 
+      hsla(235, 67%, 26%, 0.856), 
+     hsla(0, 0%, 96%, 0.212)), 
+      url(../images/brushes.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+  -webkit-clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  margin-top: 3rem;
+  margin-left: 5.5rem;
+  transform: translate(-50%, -50%);
+ padding: 1rem 5rem;
+}
+
+.heading-primary {
+  color: #c7ffd8;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading-primary-main1 {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-main2 {
+  display: block;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 1.5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub1 {
+  display: block;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 2rem;
+  margin-top: 6rem;
+
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub2 {
+  display: block;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 2rem;
+
+
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveInLeft {
+  0% {
+      opacity: 0;  
+      transform:translateX(-10rem) rotate(12deg);
+  }
+
+  75% {
+      transform: translateX(.2rem);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform:translateX(10rem) rotate(12deg);
+  }
+
+  75% {
+      transform: translateX(-.2rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform:translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+
+
+
+/* Schedule Page2 Slide */
+#schedule {
+  background-color: #161d6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+  -webkit-clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+}
+
+#schedule .container-fluid {
+  padding: 10% 10%;
+}
+
+.thead-custom {
+  background-color: #98ded9;
+  color: #161d6f;
+}
+
+.row1 {
+  color: #f6f6f6;
+}
+
+td {
+  color: #c7ffd8;
+}
+
+
+/* Image Holder Page3 slide */
+
+#image_holder {
+  background-image: url(../images/img2.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+  -webkit-clip-path: polygon(0 0, 96% 0, 100% 100%, 4% 100%);
+}
+
+/* Gallery Page4 slide */
+
+
+
+#gallery {
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+#gallery .title-text {
+  position: relative;
+  color: #161d6f;
+  margin-bottom: 1.5rem;
+  top: .5rem;
+  left: 4%;
+}
+
+
+#gallery .container {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  width: 90vw;
+  padding-bottom: 5rem;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 5rem;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 1rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel:nth-of-type(1),
+.panel:nth-of-type(3),
+.panel:nth-of-type(5) {
+  color: #161d6f;
+}
+
+.panel:nth-of-type(2),
+.panel:nth-of-type(4) {
+  color: #ffee93;
+}
+
+
+
+.panel h3 {
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 670px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  html {
+    font-size: 32%;
+  }
+  
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 26%;
+  }
+}
+
+
+
+/* Newsletter Signup Page5 slide */
+
+
+
+#newsletter .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #98ded9;
+  clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(4% 0, 96% 0, 100% 100%, 0 100%);
+}
+
+.text-signup-main {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.1rem;
+  text-align: center;
+  color: #161d6f;
+  padding: .2rem;
+  margin-top: .4rem;
+  text-transform: uppercase;
+}
+
+.text-signup-sub {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.6rem;
+  text-align: center;
+  color: #161d6f;
+  padding: .2rem;
+  margin-top: .4rem;
+  text-transform: uppercase;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 33rem;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.top {
+  margin-bottom: -.1rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle {
+  border-radius: 0;
+  margin-bottom: -.1rem;
+}
+
+.bottom {
+  margin-bottom: 1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: .9rem;
+  text-align: center;
+  color: #161d6f;
+  padding: .2rem;
+  margin-top: .4rem;
+}
+
+.btn-center{
+  background-color: #161d6f;
+}
+
+.parallax_container {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Success and Failure Pages */
+
+.bg-custom {
+  background-color: #16c79a;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #f8f1f1;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+}
+
+.jumbotron .btn-custom {
+  color: #f8f1f1;
+  background-color: #11698e;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
