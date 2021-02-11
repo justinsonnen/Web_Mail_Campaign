@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:client": "node app.js",
     "compile:sass": "node-sass sass/main.scss public/css/styles.css",
-    "start": "npm run compile:sass && npm run dev:client"
+    "start": "npm run dev:client && npm run compile:sass"
   },
   "author": "",
   "license": "ISC",
